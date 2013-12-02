@@ -19,7 +19,10 @@ requirejs.config({
         "exports" : "jquery"
       }
     },
-    deps : ["lib/jquery"],
+    deps : ["jquery"],
+    paths: {
+      "jquery": "lib/jquery"
+    },
     callback: function($) {
       require(tests, function(resolvedTests) {
         $.when.apply($, arguments).done(function() {
